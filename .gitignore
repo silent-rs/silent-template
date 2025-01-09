@@ -3,3 +3,4 @@
 .vscode
 /config/config.toml
 /data
+Cargo.lock
