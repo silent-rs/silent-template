@@ -1,0 +1,47 @@
+[package]
+name = "silent-template"
+version.workspace = true
+edition.workspace = true
+
+[workspace]
+members = [".", "api", "configs", "common", "dto", "entity", "migration", "services"]
+
+[workspace.package]
+publish = false
+edition = "2021"
+authors = ["Hubert Shelley <hubertshelley@163.com>"]
+homepage = "https://github.com/hubertshelley/silent"
+license = "Apache-2.0"
+repository = "https://github.com/hubertshelley/silent-web"
+version = "0.1.0"
+
+[workspace.dependencies]
+dto = { path = "dto" }
+entity = { path = "entity" }
+common = { path = "common" }
+api = { path = "api" }
+services = { path = "services" }
+migration = { path = "migration" }
+configs = { path = "configs" }
+
+serde = "1"
+sea-orm = "1"
+silent = "2"
+thiserror = "2"
+md5 = "0"
+hex = "0"
+async-std = "1"
+sea-orm-migration = "1"
+tokio = "1"
+tracing = "0"
+anyhow = "1"
+toml = "0"
+once_cell = "1"
+tracing-appender = "0"
+serde_json = "1.0.135"
+
+
+[dependencies]
+tokio = { workspace = true }
+api = { workspace = true }
+common = { workspace = true }

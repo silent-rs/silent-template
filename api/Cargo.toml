@@ -1,0 +1,10 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+publish.workspace = true
+
+[dependencies]
+silent = { workspace = true }
+services = { workspace = true }
+dto = { workspace = true }

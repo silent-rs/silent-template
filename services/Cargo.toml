@@ -1,0 +1,9 @@
+[package]
+name = "services"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+dto = { workspace = true }
+entity = { workspace = true }
+anyhow = { workspace = true }

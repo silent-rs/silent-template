@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Silent Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .api-test {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Silent Template</h1>
+    <div class="api-test">
+        <h2>API Test</h2>
+        <button onclick="testApi()">Test API</button>
+        <pre id="api-response"></pre>
+    </div>
+</div>
+
+<script>
+    async function testApi() {
+        const responseElement = document.getElementById('api-response');
+        responseElement.textContent = 'Testing API...';
+
+        try {
+            const response = await fetch('./api');
+            const data = await response.json();
+            responseElement.textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+            responseElement.textContent = 'Error: ' + error.message;
+        }
+    }
+</script>
+</body>
+</html>

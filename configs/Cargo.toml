@@ -1,0 +1,9 @@
+[package]
+name = "configs"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+once_cell = { workspace = true }
+toml = { workspace = true }
